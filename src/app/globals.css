@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Rajdhani", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #05070c;
+  color: #e7ecf5;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Thin futuristic scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3550;
+  border-radius: 3px;
+}
+
+/* Reusable utility classes */
+.panel-glass {
+  background: linear-gradient(180deg, rgba(17, 23, 34, 0.92), rgba(10, 13, 20, 0.92));
+  border: 1px solid rgba(120, 150, 210, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.hud-frame {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(78, 168, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 168, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
